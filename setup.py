@@ -17,8 +17,8 @@ def get_requirements(file_path:str)->List[str]:
 setup(
     name='DaimondPricePrediction',
     version='0.0.1',
-    author='sunny savita',
-    author_email='sunny.savita@ineuron.ai',
+    author='subhana sheikh',
+    author_email='subhanasheikh22@gmail.com',
     install_requires=["scikit-learn","pandas","numpy"],
     packages=find_packages()
 )
