@@ -14,3 +14,5 @@ git add origin
 git branch-M main
 
 git push origin main
+
+bash init_setup.sh
