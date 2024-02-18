@@ -1,9 +1,13 @@
 import os
 import sys
 import pandas as pd
+import numpy as np
 from src.DiamondPricePrediction.logger import logging
 from src.DiamondPricePrediction.exception import customexception
 from src.DiamondPricePrediction.utils.utils import load_object
+from sklearn.preprocessing import StandardScaler
+from sklearn.compose import ColumnTransformer
+
 
 
 class PredictPipeline:
@@ -18,7 +22,9 @@ class PredictPipeline:
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
 
-            scaled_data=preprocessor.transform(features)
+            preprocessor().fit(features)
+
+            scaled_data=preprocessor().fit_transform(features)
             pred=model.predict(scaled_data)
 
             return pred
