@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  build-and-push-ecr-image
+  build-and-push-image-to-ECR
     name: Build and Push ECR Image
     runs-on: ubuntu-latest
     steps:
